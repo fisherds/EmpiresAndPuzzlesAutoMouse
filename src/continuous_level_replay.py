@@ -1,25 +1,36 @@
 # https://pyautogui.readthedocs.io/en/latest/
 
 import pyautogui
-from time import sleep
+import time
+
 
 screenWidth, screenHeight = pyautogui.size() # Get the size of the primary monitor.
 print(screenHeight)
 print(screenWidth)
+start_time = time.time()
 while True:
-    sleep(0.5)
+    time.sleep(0.5)
     # currentMouseX, currentMouseY = pyautogui.position() # Get the XY position of the mouse.
     # print("({:2}, {:2}".format(currentMouseX, currentMouseY))
 
-    pyautogui.moveTo(1778, 1060, duration=1, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(1532, 927, duration=.25, tween=pyautogui.easeInOutQuad)
     pyautogui.click()
-    pyautogui.moveTo(1808, 105, duration=1, tween=pyautogui.easeInOutQuad)
-    pyautogui.click()
-    pyautogui.moveTo(1434, 1065, duration=1, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(1852, 986, duration=.25, tween=pyautogui.easeInOutQuad)
     pyautogui.click()
 
+    # pyautogui.moveTo(1639, 678, duration=.25, tween=pyautogui.easeInOutQuad)
+    # pyautogui.click()
+    # time.sleep(0.5)
+    # pyautogui.click()
 
 
+    pyautogui.moveTo(1812, 98, duration=.25, tween=pyautogui.easeInOutQuad)
+    pyautogui.click()
+
+    elapsed_time_min = (time.time() - start_time) / 40
+    print(elapsed_time_min)
+    if elapsed_time_min > 40:
+        break
 #
 # pyautogui.moveTo(100, 150) # Move the mouse to XY coordinates.
 #
